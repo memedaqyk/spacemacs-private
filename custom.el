@@ -13,6 +13,10 @@
  '(company-statistics-auto-restore nil)
  '(ctags-update-delay-seconds 1024)
  '(cursor-type (quote bar))
+ '(elpy-disable-backend-error-display t)
+ '(elpy-modules
+   (quote
+    (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
  '(erc-nick "zilongshanren")
  '(erc-port 6666)
  '(evil-default-cursor (quote (t)))
