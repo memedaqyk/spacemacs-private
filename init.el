@@ -21,7 +21,7 @@ values."
    ;; variable `dotspacemacs-configuration-layers' to install it.
    ;; (default 'unused)
    dotspacemacs-enable-lazy-installation nil
-   ;; If non-nil then Spacemacs will ask for confirmation before installing
+   ;; If non-nil then Spacemacs Can not install ‘anaconda-mode’ server will ask for confirmation before installing
    ;; a layer lazily. (default t)
    dotspacemacs-ask-for-lazy-installation nil
    ;; If non-nil layers with lazy install support are lazy installed.
@@ -41,7 +41,7 @@ values."
      (syntax-checking :variables syntax-checking-enable-by-default nil
                       syntax-checking-enable-tooltips nil)
      (spell-checking :variables spell-checking-enable-by-default nil)
-     ;; (vinegar :variables vinegar-reuse-dired-buffer t)
+     ;; (vinegCan not install ‘anaconda-mode’ server ar :variables vinegar-reuse-dired-buffer t)
      (spacemacs-layouts :variables layouts-enable-autosave nil
                         layouts-autosave-delay 300)
      (git :variables
@@ -76,8 +76,8 @@ values."
      html
      javascript
      (typescript :variables
-                typescript-fmt-on-save nil
-                typescript-fmt-tool 'typescript-formatter)
+                 typescript-fmt-on-save nil
+                 typescript-fmt-tool 'typescript-formatter)
      emacs-lisp
      (clojure :variables clojure-enable-fancify-symbols t)
      racket
@@ -99,11 +99,11 @@ values."
    '(magit-gh-pulls magit-gitflow  evil-mc realgud
                     evil-args evil-ediff evil-exchange evil-unimpaired
                     evil-indent-plus volatile-highlights smartparens
-                    spaceline holy-mode skewer-mode rainbow-delimiters
+                    spaceline holy-mode skewer-mode evil-escape rainbow-delimiters
                     highlight-indentation vi-tilde-fringe eyebrowse
                     org-bullets smooth-scrolling org-repo-todo org-download org-timer
-                    livid-mode git-gutter git-gutter-fringe  evil-escape
-                    leuven-theme gh-md evil-lisp-state spray lorem-ipsum symon
+                    livid-mode git-gutter git-gutter-fringe leuven-theme
+                    gh-md evil-lisp-state spray lorem-ipsum symon
                     ac-ispell ace-jump-mode auto-complete auto-dictionary
                     clang-format define-word google-translate disaster epic
                     fancy-battery org-present orgit orglue spacemacs-theme
@@ -174,14 +174,15 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(solarized-light
+   dotspacemacs-themes '(spacemacs-dark
+                         solarized-light
                          solarized-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 14
+                               :size 22
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -358,6 +359,9 @@ values."
   )
 
 (defun dotspacemacs/user-config ()
+  (elpy-enable)
+  (setq python-shell-interpreter "/Users/kingle/anaconda/bin/ipython"
+        python-shell-interpreter-args "--simple-prompt -i")
   ;;解决org表格里面中英文对齐的问题
   (when (configuration-layer/layer-usedp 'chinese)
     (when (and (spacemacs/system-is-mac) window-system)
@@ -439,4 +443,4 @@ values."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-)
+  )

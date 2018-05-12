@@ -45,7 +45,7 @@
         robe
         ))
 
-(defun zilongshanren-programming/post-init-robe ()
+(defun zilongshanren-programming/post-init-robe (Can not install ‘anaconda-mode’ server )
   (progn
     (add-hook 'inf-ruby-mode-hook 'spacemacs/toggle-auto-completion-on)
     (defun zilongshanren/ruby-send-current-line (&optional print)

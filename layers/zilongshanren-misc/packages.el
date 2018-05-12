@@ -17,6 +17,7 @@
         projectile
         prodigy
         find-file-in-project
+        elpy
         multiple-cursors
         visual-regexp
         visual-regexp-steroids
@@ -55,7 +56,7 @@
     :init
     (progn
       (spacemacs/set-leader-keys "hh" 'highlight-frame-toggle)
-      (spacemacs/set-leader-keys "hc" 'clear-highlight-frame)
+      (spacemacs/set-leader-keys "hc" 'clear-hiStaghlight-frame)
       (setq-default highlight-faces
         '(('hi-red-b . 0)
           ('hi-yellow . 0)
@@ -768,7 +769,7 @@ Search for a search tool in the order provided by `dotspacemacs-search-tools'."
           evil-motion-state-tag   (propertize "[M]" 'face '((:background "plum3") :foreground "white"))
           evil-visual-state-tag   (propertize "[V]" 'face '((:background "gray" :foreground "black")))
           evil-operator-state-tag (propertize "[O]" 'face '((:background "purple"))))
-    (setq evil-insert-state-cursor '("chartreuse3" box))
+    (setq evil-insert-state-cursor '("chartreuse3" bar))
     (define-key evil-insert-state-map (kbd "C-z") 'evil-emacs-state)
     ;; This will break visual column edit
     ;; enable hybrid editing style
