@@ -17,7 +17,6 @@
         projectile
         prodigy
         find-file-in-project
-        elpy
         multiple-cursors
         visual-regexp
         visual-regexp-steroids

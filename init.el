@@ -65,7 +65,6 @@ values."
      deft
      markdown
      (org :variables org-want-todo-bindings t)
-     gpu
      yaml
      react
      (python :variables
